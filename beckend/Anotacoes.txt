@@ -1,0 +1,218 @@
+GET,POST,PUT,DELTE
+
+GET = PEGAR UMA INFO NO BECKEND
+POST = CRIAR UMA INGO NO BECKEND
+PUT = ALTERAR ""
+DELETE = DELETAR "
+
+TIPOS DE PARAMETROS 
+
+QUERY PARAMS : PARAMETROS NOMEADOS ENVIADOS NA ROTA APOS "?"
+Route Params : Parametros utilizados para identificar recursos "/:id"
+Request Body : corpo da requisição, utilizado para criar ou alterar recursos
+
+Request = guarda todos os dados que vem da requisição
+Response = retornar uma respota para o usuario
+
+
+*****************************************************************
+
+    ANOTACOES SEMANA OMINISTACK
+
+
+*****************************************************************
+
+## Metodos HTTP
+
+- GET: Buscar informação do backend
+- POST: Criar uma informação no backend
+- PUT: Alterar uma informação no backend
+- DELETE: Deletar uma informação no backend
+
+## Tipos de parâmetros
+
+ 
+
+- Query: Parâmetros nomeados enviados na rota após "?"(Filtros,paginação)
+- Route Params: Parâmetros utilizados para identificar recursos
+- Resquest Body: Corpo da requisição, utilizado para criar ou alterar recursos.
+
+## Nodemon
+
+### Nodemon server para monitorar as mudanças no código e startar o servidor automaticamente.
+
+- npm install nodemon -D — Instala o nodemon
+
+Apos a instalação vá ao arquivo package.json e em scripts crie o nome do script exemplo start e passe a pagina inicial do projeto. 
+
+Exemplo: "nodemon index.js"
+
+Agora para rodar o projeto faça npm start.
+
+## Conceitos do React
+
+- Componente
+
+     Sempre retorna "algo" que vai ser exibido na tela.
+
+    Tipicamente, novos aplicativos React tem um único componente App no topo. Contudo, se você integrar o React em um aplicativo existente, você pode começar de baixo para cima com um pequeno componente como o Button e gradualmente chegar ao topo da hierarquia de exibição
+
+- JSX(Java Script e XML)
+
+    Quando o HTML está escrito dentro de um arquivo Java Script
+
+- Propriedades
+
+    Atributos repassados para componentes ao invés de elementos do html.
+
+- Estado
+
+     Informação que vai ser mantida pelo componente
+
+- Imutabilidade
+
+    Não pode alterar o valor do estado de uma forma direta
+
+    ## Cliente HTTP- axios
+
+    É responsável por fazer as chamadas a API do back-end e obter as respostas.
+
+    Para conectar o React(Fron-end) com o NodeJS(Back-end) é necessário instalar um cliente HTTP na aplicação do front-end nesse caso o axios. Comando:
+
+    npm install axios
+
+    ### React Native
+
+    - Não tem as mesmas tags que tem no html
+    - pra estilização tem que usar o style e ela recebe um objeto com a estilização
+    - todos componentes já tem display:flex  por padrão.
+    - Não existe herança de estilos.
+
+    ### Configurando a navegação
+
+    - npm install @react-navigation/native -instale os pacotes necessários no  projeto
+    - expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view  - Instalando dependências em um projeto gerenciado pela Expo
+    - npm install @react-navigation/stack - instala o tipo de navegação nesse caso pilha de navegação por botoes.
+    - expo install expo-mail-composer abrir email direto da minha aplicação
+    - sudo npm install intl- adiciona a função ntl no android utilizada para colocar valor em reais no formato R$ 50,00. -biblioteca de internacionalização
+
+
+
+
+*****************************************************************
+
+   COMANDO NPM 
+
+
+*****************************************************************
+
+
+    npm init -y — criar um projeto react
+
+npm install express —  para mapear as rotas da aplicação
+
+node index.js - execulta a aplicação
+
+npx create-react-app nomeDaPasta — execulta um pacote externo sem a necessidade de instala -lo na maquina
+
+npm start - execulta a aplicação apos a configuração do nodemon.
+
+npm install nodemon -D — para configurar atalho para não precisar ficar iniciando o projeto toda hora "-D"para dizer que é uma dependência de  desenvolvedor.
+
+npm install knex — para rodar as query em JS com Query Builder utilizando o BD SQLite
+
+npm install sqlite3 — instala o driver do BD que vai ser utilizado.
+
+npx knex migrate:make create_ongs — cria s migrate responsavel por cria a tabela no banco.
+
+npx knex migrate:latest — cria a tabela mapeada na migrate.
+
+npm install cors — determina quem vai acessar a aplicação
+
+npm install react-icons — instala pacote de ícones disponíveis. (front-end)
+
+npm install react-router-dom - pacotes responsável pelas rotas da aplicação.(front-end)
+
+npm install axios(front-end) — responsável para conectar o front-end ao back-end.
+
+npm install -g expo-cli - instala o expo(-g instala de forma global)
+
+expo init mobile - inicia um projeto com expo
+
+expo install expo-constants - para configurar status bar obtêm algumas constants
+
+
+*****************************************************************
+
+Configurando bd SQLite
+
+
+*****************************************************************
+
+
+Link documentação [http://knexjs.org/](http://knexjs.org/)
+
+- Para utilizar o query builder vamos instalar o KNEX.JS
+- Utilizando o Query Builder: Querys construídas utilizando o JavaScript.Exe: table('users').select('*').wher()
+- 
+
+## Comandos para criar migrate
+
+- npx knex migrate:make create_ongs — cria s migrate responsável por cria a tabela no banco.
+- npx knex migrate:latest — cria a tabela mapeada na migrate.
+
+
+*****************************************************************
+
+Comando Git
+
+
+*****************************************************************
+
+Util - [https://medium.com/ekode/primeiros-passos-com-git-e-gitlab-criando-seu-primeiro-projeto-89f9001614b0](https://medium.com/ekode/primeiros-passos-com-git-e-gitlab-criando-seu-primeiro-projeto-89f9001614b0)
+
+Faça os passos  abaixo em um diretório do seu projeto local que deseja enviar para o git.
+
+git init
+git remote add origin [https://github.com/Ronedias/be-the-hero.git](https://github.com/Ronedias/be-the-hero.git)
+git status
+git add
+git add backend/
+git commit -m "back-end da aplicação"
+527 git push origin master
+530 git status
+531 git add frontend/
+532 git commit -m "front-end da aplicação-Incompleto"
+533 git push origin master
+
+## Subindo alterações no git
+
+No diretório que iniciou o git faça(no caso na pasta projeto)
+
+**git status** - lista os arquivos que foram modificados
+
+git add *  - adiciona todos os arquivos para subir -prepara os arquivos para serem sincronizados. Nesse caso, como passamos um * como argumento, ele adicionará todos os arquivos criados ou modificados.
+
+git commit -m "mensagem" - **cria uma operação d**e envio, ou seja, pega todos os arquivos que foram adicionados e os agrupa para serem enviados. Com o argumento -m informamos uma mensagem que identifica esse commit. É importante que essa mensagem seja clara para que seja fácil identificar o que foi feito naqueles arquivos que estão sendo enviados
+
+git push origin master - essa é a operação de sincronização propriamente dita. Ela pegará o último commit e o enviará para o repositório.
+
+
+
+*****************************************************************
+
+Duvidas
+
+
+*****************************************************************
+
+
+Porque na aplicação backend utiliza o express para mapear as rotas e no frontend utiliza o pacote da DOM sendo que os dois são projetos react??
+
+o backend não é react é nodeJS, logo o backend é nodeJS + express pra mapear as rotas  e frontend é react + a DOM pra rotas.
+
+Galera boa noite, alguém sabe como prossigo no desenvolvimento mobile sem utilizar o expo.Por exemplo como faria para emula a aplicação com react native no emulador do androi sem passar pelo expo? se alguem solber por favor me explique ou compartilhe link que esclareça essa duvida .
+
+como publicar [https://www.youtube.com/watch?v=-j7vLmBMsEU](https://www.youtube.com/watch?v=-j7vLmBMsEU)
+
+https://www.notion.so/4e69e9473590428bb2ab1217db6fe541?v=e9e60d4d91134363981b46534850f5d7
